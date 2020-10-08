@@ -15,4 +15,11 @@ class User < ApplicationRecord
 
   has_many :friending_users, foreign_key: :friendee_id, class_name: 'Friendship'
   has_many :frienders, through: :friending_users
+
+  def friends
+    friends_array = []
+    friended_users.each { |i| friends_array << i.friendee if i.status }
+    friending_users.each { |i| friends_array << i.friender if i.status }
+    friends_array.compact
+  end
 end
