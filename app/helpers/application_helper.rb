@@ -19,4 +19,18 @@ module ApplicationHelper
   def friendship_id_generator(arg1, arg2)
     [arg1, arg2].sort.join('').to_i
   end
+
+  def friendship_checker(user, friendship_id)
+    return if current_user == user
+    
+    if current_user.friends.include?(user)
+      content_tag(:p, 'Friends')
+    elsif current_user.pending_friends.include?(user)
+      content_tag(:p, 'Friend Request sent ...')
+    elsif current_user.friend_requests.include?(user)
+      link_to 'Accept request', friendship_path(friendship_id), method: :put
+    else
+      link_to 'Add as friend', friendships_path(friendee_id: user.id), method: :post
+    end
+  end
 end
