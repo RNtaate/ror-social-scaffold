@@ -1,5 +1,7 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+  <% friendship_id = friendship_id_generator(current_user.id, @user.id)%> 
+  <%= friendship_checker(@user, friendship_id)%>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
