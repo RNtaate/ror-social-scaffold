@@ -10,7 +10,7 @@ class FriendshipsController < ApplicationController
 
     @friendship.save unless Friendship.where(friendship_id: @friendship.friendship_id).exists?
 
-    redirect_to users_path
+    redirect_back(fallback_location: root_path)
   end
 
   def update
@@ -18,6 +18,14 @@ class FriendshipsController < ApplicationController
     @friendship.status = true
     @friendship.save
 
-    redirect_to users_path
+    redirect_back(fallback_location: root_path)
+  end
+
+  def destroy
+    @friendship = Friendship.find_by(friendship_id: params[:id])
+    @friendship.destroy
+
+    redirect_back(fallback_location: root_path)
+    # redirect_to users_path
   end
 end
