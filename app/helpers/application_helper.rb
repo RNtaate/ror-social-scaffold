@@ -15,4 +15,8 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def friendship_id_generator(arg1, arg2)
+    [arg1, arg2].sort.join('').to_i
+  end
 end
