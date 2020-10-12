@@ -1,0 +1,8 @@
+example_id                                         | status | run_time      |
+-------------------------------------------------- | ------ | ------------- |
+./spec/features/accept_friend_request_spec.rb[1:1] | passed | 4.24 seconds  |
+./spec/features/create_a_comment_spec.rb[1:1]      | passed | 4.32 seconds  |
+./spec/features/create_a_post_spec.rb[1:1]         | passed | 4.36 seconds  |
+./spec/features/send_friend_request_spec.rb[1:1]   | passed | 4.36 seconds  |
+./spec/features/sign_in_spec.rb[1:1]               | passed | 3.75 seconds  |
+./spec/features/sign_up_spec.rb[1:1]               | passed | 12.44 seconds |
