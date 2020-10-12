@@ -18,20 +18,20 @@ class User < ApplicationRecord
 
   def friends
     friends_array = []
-    friended_users.each { |i| friends_array << i.friendee if i.status }
-    friending_users.each { |i| friends_array << i.friender if i.status }
+    friended_users.includes([:friendee]).each { |i| friends_array << i.friendee if i.status }
+    friending_users.includes([:friender]).each { |i| friends_array << i.friender if i.status }
     friends_array.compact
   end
 
   def pending_friends
     pending_array = []
-    friended_users.each { |i| pending_array << i.friendee unless i.status }
+    friended_users.includes([:friendee]).each { |i| pending_array << i.friendee unless i.status }
     pending_array.compact
   end
 
   def friend_requests
     request_array = []
-    friending_users.each { |i| request_array << i.friender unless i.status }
+    friending_users.includes([:friender]).each { |i| request_array << i.friender unless i.status }
     request_array.compact
   end
 end
