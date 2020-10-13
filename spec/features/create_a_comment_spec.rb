@@ -9,7 +9,7 @@ RSpec.describe 'Creating a comment process', type: :feature do
                          password: '123456', password_confirmation: '123456')
 
     @friendship = Friendship.create(friender_id: @user2.id, friendee_id: @user1.id,
-    friendship_id: "#{@user1.id}#{@user2.id}".to_i, status: true)
+                                    friendship_id: "#{@user1.id}#{@user2.id}".to_i, status: true)
     @post = Post.create(user_id: @user1.id, content: 'This is my first post')
   end
 

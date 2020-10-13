@@ -5,9 +5,9 @@ RSpec.describe 'Private posts', type: :feature do
     @user1 = User.create!(name: 'User1', email: 'user1@something.com',
                           password: '123456', password_confirmation: '123456')
     @user2 = User.create!(name: 'User2', email: 'user2@something.com',
-    password: '123456', password_confirmation: '123456')
+                          password: '123456', password_confirmation: '123456')
     @user3 = User.create!(name: 'User3', email: 'user3@something.com',
-    password: '123456', password_confirmation: '123456')
+                          password: '123456', password_confirmation: '123456')
 
     @friendship = Friendship.create(friender_id: @user2.id, friendee_id: @user1.id,
                                     friendship_id: "#{@user1.id}#{@user2.id}".to_i, status: true)
