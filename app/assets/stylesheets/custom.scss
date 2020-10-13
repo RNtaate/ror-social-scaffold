@@ -322,6 +322,10 @@ form {
   }
 }
 
+.mutual_friends {
+  color: $primary-color-dark;
+}
+
 @media only screen and (min-width: 480px) {
   form {
     width: 60%;

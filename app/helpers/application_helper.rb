@@ -47,4 +47,9 @@ module ApplicationHelper
       link_to 'Add as friend', friendships_path(friendee_id: user.id), method: :post
     end
   end
+
+  def friendship_heading(user)
+    return if current_user == user
+    content_tag(:h4, "Mutual Friends")
+  end
 end
