@@ -2,6 +2,10 @@
  This is a scaffold for an online social media platform.
 
  Users can sign-in and sign-up, create posts, comments and like posts.
+ 
+ Registered Users can send friend requests, accept or decline friend requests from other users, unfriend friends.
+ 
+ In the `Timeline` users can only view friends' posts.
 
 ## screenshots!
  `COMING SOON`
