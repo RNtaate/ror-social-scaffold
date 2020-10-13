@@ -1,0 +1,5 @@
+<%= friendship_heading(@user) %>
+
+<% current_user.mutual_friends(@user).each do |friend|%>
+  <small><%= link_to friend.name, user_path(friend), class: 'mutual_friends' %>, </small>
+<% end %>

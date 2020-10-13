@@ -2,6 +2,8 @@
   <h2><%= "Name: #{@user.name}" %></h2>
   <span><b>Status: </b><% friendship_id = friendship_id_generator(current_user.id, @user.id)%></span> 
   <%= friendship_checker(@user, friendship_id)%>
+  <br><br>
+  <%= render 'mutual_friends'%>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
