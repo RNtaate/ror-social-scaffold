@@ -26,6 +26,5 @@ class FriendshipsController < ApplicationController
     @friendship.destroy
 
     redirect_back(fallback_location: root_path)
-    # redirect_to users_path
   end
 end
