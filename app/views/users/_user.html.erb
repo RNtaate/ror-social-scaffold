@@ -1,6 +1,8 @@
 <li>
   Name: <%= user.name %>
   <span class="profile-link">
+    <% friendship_id = friendship_id_generator(current_user.id, user.id)%>
+    <%= friendship_checker(user, friendship_id)%>
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
   </span>
 </li>
