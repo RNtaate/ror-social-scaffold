@@ -8,7 +8,7 @@
  In the `Timeline` users can only view friends' posts.
 
 ## screenshots!
- `COMING SOON`
+![](screenshots/screenshot1.png)
 
 ## Built With
 
@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-- Coming soon!
+- [Social Media App](https://still-citadel-61381.herokuapp.com)
 
 ## Contributions
 
