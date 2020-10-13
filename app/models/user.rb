@@ -34,4 +34,18 @@ class User < ApplicationRecord
     friending_users.includes([:friender]).each { |i| request_array << i.friender unless i.status }
     request_array.compact
   end
+
+  def mutual_friends(other_user)
+    mutual_friends = []
+
+    if self != other_user
+      my_friends = friends
+      other_friends = other_user.friends
+      other_friends.each do |j|
+        mutual_friends << j if my_friends.include?(j)
+      end
+    end
+
+    mutual_friends
+  end
 end
