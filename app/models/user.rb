@@ -39,9 +39,9 @@ class User < ApplicationRecord
     mutual_friends = []
 
     if self != other_user
-      my_friends = self.friends
+      my_friends = friends
       other_friends = other_user.friends
-      for j in other_friends
+      other_friends.each do |j|
         mutual_friends << j if my_friends.include?(j)
       end
     end

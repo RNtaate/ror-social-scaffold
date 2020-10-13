@@ -50,6 +50,7 @@ module ApplicationHelper
 
   def friendship_heading(user)
     return if current_user == user
-    content_tag(:h4, "Mutual Friends")
+
+    content_tag(:h4, 'Mutual Friends')
   end
 end
