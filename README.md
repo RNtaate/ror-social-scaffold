@@ -8,7 +8,7 @@
  In the `Timeline` users can only view friends' posts.
 
 ## screenshots!
- `COMING SOON`
+![](screenshots/screenshot1.png)
 
 ## Built With
 
@@ -17,11 +17,26 @@
 
 ## Live Demo
 
-- Coming soon!
+- [Social Media App](https://still-citadel-61381.herokuapp.com)
 
-## Contributions
+## How to run this project on your local machine
 
-- TBA
+### Prerequisites
+1. You should have ruby installed.(This project was tested on version `2.7.0`)
+1. You should have rails installed.(This project was tested on version `5.2.4.3`)
+1. You should have bundler installed.(This project was tested with Bundler version `2.1.4`)
+
+   
+### Steps to follow
+1. Clone the repository to your local machine using `git clone git@github.com:ershadul1/ror-social-scaffold.git`
+1. On your local machine, navigate to the ror-social-scaffold folder using `cd ror-social-scaffold` in your terminal
+1. Install all the gems for the project by running `bundle` in your terminal
+1. Migrate the database using this command
+`bin/rake db:migrate`
+1. Start the server by using this command.
+`bin/rails server`
+
+1. Open this link in your favorite browser `http://localhost:3000`
 
 ## Authors
 
